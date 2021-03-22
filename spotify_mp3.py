@@ -63,10 +63,6 @@ def spotify_txt():
             other_info.append({'name': item['name'], 'artist': item['artists'][0]['name'],
                                'album': title['name'], 'track_number': item['track_number'],
                                'image_location': title['images'][0]['url']})
-    # some smartass wants to screw with the system
-    else:
-        title = 'suck nuts'
-        print('screw off dipstick, pick an actual option')
     return search_title, toggle, title, other_info
 
 
