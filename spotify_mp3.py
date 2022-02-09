@@ -16,8 +16,8 @@ def spotify_txt():
     # user choice time
     toggle = int(input("Do you want your favorite songs saved (1), do you have a link to a playlist (2),"
                        " or do you have a link to an album (3)?\n"))
-    sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="1bfd06968a4d44ff8ffb937ab7301f06",
-                                                   client_secret="95e85447f3a444f5b1fd64843d58f8a9",
+    sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="id",
+                                                   client_secret="secret",
                                                    redirect_uri="http://localhost:8888/callback",
                                                    scope="user-library-read"))
     # favorite songs list
@@ -79,7 +79,7 @@ def youtube_search(search_list):
         except: # if the web scraper version fails, as it sometimes does, it then goes to the official Google Youtube API (however, this version has a limit to the number of requests you can send in a day, so it doesn't work for massive amounts of songs)
             api_service_name = "youtube"
             api_version = "v3"
-            DEVELOPER_KEY = "AIzaSyCGo4DdnZwC9PgJLQyozcI7spNEkMwQYj8"
+            DEVELOPER_KEY = "KEY"
 
             youtube = googleapiclient.discovery.build(api_service_name, api_version, developerKey=DEVELOPER_KEY)
 
